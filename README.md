@@ -17,3 +17,15 @@ Horizontal GradperStep:0.074800532<br>
 
 ## Electronics
 The electronics consists of an [Raspberry Pi](https://www.raspberrypi.org/) and the [HAT PCB](electronic/HAT/README.md) wich contains Motor Drivers, and Compass
+
+## Prices
+
+Position           | Quantity | Price | Full
+------------------ | -------- | ---- | -----
+3D printed Parts | 1 | ~5$ | 5$
+Raspberry Pi 3 | 1 | ~ 35$ | 35$
+28BYJ-48 | 2 | ~3$ | 6$
+Bearing 13mm | 2 | 0.4$ | 0.8$
+Raspberry Pi HQ Camera | 1 | 53$ | 53$
+[HAT PCB](electronic/HAT/README.md#BOM) | 1 | 6.5$ | 6.5$
+| | | | 106.3$
