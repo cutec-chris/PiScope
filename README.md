@@ -13,3 +13,4 @@ Horizontal GradperStep:0.074800532<br>
 [OH1](construction/OH1.md) - Lens holder for small C-Mount lenses like original raspberry Pi Lenses<br>
 [OH2](construction/OH2.md) - Lens holder for Vivitar 70-200mm Cannon FD Tele Lens<br>
 [OH3](construction/OH3.md) - Lens holder for Waveshare 8-50mm C-Mount Lens<br>
+[OH4](construction/OH4.md) - Lens holder for Tokina 500mm FD Mount Lens<br>
