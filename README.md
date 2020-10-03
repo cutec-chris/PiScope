@@ -14,3 +14,6 @@ Horizontal GradperStep:0.074800532<br>
 [OH2](construction/OH2.md) - Lens holder for Vivitar 70-200mm Cannon FD Tele Lens<br>
 [OH3](construction/OH3.md) - Lens holder for Waveshare 8-50mm C-Mount Lens<br>
 [OH4](construction/OH4.md) - Lens holder for Tokina 500mm FD Mount Lens<br>
+
+## Electronics
+The electronics consists of an [Raspberry Pi](https://www.raspberrypi.org/) and the [HAT PCB](electronic/HAT/README.md) wich contains Motor Drivers, and Compass
