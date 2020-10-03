@@ -1,0 +1,107 @@
+
+(rules PCB MiniTeleskop
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 7718)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.2)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clear 200.2)
+    (clear 100.0 (type smd_to_turn_gap))
+    (clear 300.2 (type default_Power04mm))
+    (clear 50.0 (type smd_smd))
+    (clear 300.2 (type smd_Power04mm))
+    (clear 300.2 (type "kicad_default"_Power04mm))
+    (clear 300.2 (type Power04mm_Power04mm))
+  )
+  (padstack "Via[0-1]_500:300_um"
+    (shape
+      (circle F.Cu 500.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 500.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_500:300_um" "Via[0-1]_500:300_um" default
+  )
+  (via 
+    "Via[0-1]_500:300_um-kicad_default" "Via[0-1]_500:300_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_500:300_um-Power04mm" "Via[0-1]_500:300_um" Power04mm
+  )
+  (via_rule
+    default "Via[0-1]_500:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_500:300_um-kicad_default"
+  )
+  (via_rule
+    Power04mm "Via[0-1]_500:300_um-Power04mm"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "/P3V3_HAT" "/I2C_DA" "/I2C_CL" /GND "/M4_4" "/M4_3" "/M4_2" "/M4_1"
+    "/SPI_MOSI" "/SPI_MISO" "/M3_4" "/SPI_CLK" "/M3_3" "/M3_2" "/M3_1" "/M2_4"
+    "/M1_4" "/M2_3" "/M2_2" "/M1_3" "/M2_1" "/M1_2" "/M1_1" /P3V3
+    "/SPI_CS0" "/M_EN1" "/M_EN2" "/M_EN3" "/M_EN4" "Net-(J9-Pad2)" "Net-(J10-Pad2)" "Net-(J11-Pad2)"
+    "Net-(J12-Pad2)" "Net-(J8-Pad1)" "Net-(A1-Pad2)" "Net-(A2-Pad2)" "Net-(A3-Pad2)" "Net-(A4-Pad2)" "/ID_SC_EEPROM" "/ID_SD_EEPROM"
+    "/SPI_CS1" "Net-(J3-Pad17)" "/M_EN" "Net-(J3-Pad8)" "Net-(J3-Pad7)" "Net-(U1-Pad12)" "Net-(U1-Pad11)" "Net-(U1-Pad10)"
+    "Net-(U1-Pad7)" "Net-(U1-Pad6)" "Net-(U1-Pad5)" "Net-(U2-Pad12)" "Net-(U2-Pad11)" "Net-(U2-Pad10)" "Net-(U2-Pad7)" "Net-(U2-Pad6)"
+    "Net-(U2-Pad5)" "Net-(U3-Pad12)" "Net-(U3-Pad11)" "Net-(U3-Pad10)" "Net-(U3-Pad7)" "Net-(U3-Pad6)" "Net-(U3-Pad5)" "Net-(U4-Pad12)"
+    "Net-(U4-Pad11)" "Net-(U4-Pad10)" "Net-(U4-Pad7)" "Net-(U4-Pad6)" "Net-(U4-Pad5)" "Net-(U5-Pad13)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power04mm
+    GNDA "/P5V_HAT" "/V_MOTOR" "/M1_OUT4" "/M1_OUT3" "/M1_OUT1" "/M1_OUT2" "/M2_OUT4"
+    "/M2_OUT3" "/M2_OUT1" "/M2_OUT2" "/M3_OUT4" "/M3_OUT3" "/M3_OUT1" "/M3_OUT2" "/M4_OUT4"
+    "/M4_OUT3" "/M4_OUT1" "/M4_OUT2"
+    (clearance_class Power04mm)
+    (via_rule Power04mm)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
